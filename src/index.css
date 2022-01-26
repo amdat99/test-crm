@@ -1,0 +1,86 @@
+.fadeAndGrow {
+  -webkit-animation: 1s ease 0.5s normal forwards 1 fadein;
+  animation: 1s ease 0.5s normal forwards 1 fadein;
+  -webkit-animation: 1s ease 0.5s normal forwards 1 grow;
+  animation: 1s ease 0.5s normal forwards 1 grow;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes grow {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.hideScroll {
+  /* This is the magic bit for Firefox */
+  scrollbar-width: none;
+}
+
+.hideScroll::-webkit-scrollbar {
+  /* This is the magic bit for WebKit */
+  display: none;
+}
+
+.linker {
+  cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+
+.linker:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
